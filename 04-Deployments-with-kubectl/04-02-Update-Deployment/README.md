@@ -16,7 +16,7 @@ kubectl get deployment my-first-deployment -o yaml
 # Update Deployment - SHOULD WORK NOW
 kubectl set image deployment/<Deployment-Name> <Container-Name>=<Container-Image> --record=true
 kubectl set image deployment/my-first-deployment kubenginx=stacksimplify/kubenginx:2.0.0 --record=true
-#--record=true is deprecated, so we need to use anotate instead like below:
+#--record=true is deprecated, so we need to use annotate instead like below:
 kubectl set image deployment/my-first-deployment kubenginx=stacksimplify/kubenginx:2.0.0
 kubectl annotate deployments my-first-deployment  kubernetes.io/change-cause="kubenginx updated 2.0.0"  #Annotate the last record 
 
