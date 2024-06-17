@@ -85,7 +85,7 @@ http://<worker-node-public-ip>:<Node-Port>
 # Edit Deployment
 kubectl edit deployment/<Deployment-Name> --record=true
 kubectl edit deployment/my-first-deployment --record=true
-#--record=true
+#--record=true is deprecated
 kubectl edit deployment/my-first-deployment
 kubectl annotate deployments my-first-deployment kubernetes.io/change-cause="edited deployment directly with edit"  #Annotate the last record 
 
